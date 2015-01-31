@@ -1,19 +1,19 @@
 <body>
-
+	{{> tabuleiro}}
 </body>
 
 <template name="tabuleiro">
-  {{#each players}}
-    {{> player}}
-  {{/each}}
+	{{#each players}}
+		{{> player}}
+	{{/each}}
 </template>
 
 <template name="player">
-  <h1>{{name}}</h1>
-  <h3>Pedras</h3>
-  <ul>
-    {{#each pedras}}
-      <li>{{valor}}</li>
-    {{/each}}
-  </ul>
+	<h1>{{_id}}</h1>
+	<h3>Pedras</h3>
+	<ul>
+		{{#each pedras}}
+			<li>{{valor}}</li>
+		{{/each}}
+	</ul>
 </template>
