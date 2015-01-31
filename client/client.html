@@ -3,49 +3,17 @@
 </body>
 
 <template name="tabuleiro">
-	...
+  {{#each players}}
+    {{> player}}
+  {{/each}}
 </template>
 
-<template name="container">
-	<div class="container">
-		<div class="panel panel-primary">
-			<div class="panel-heading clearfix">
-				<h3 class="panel-title">Salas</h3>
-				{{> loginButtons}}
-			</div>
-			<div class="panel-body">
-				{{> list_rooms}}
-			</div>
-			{{#if canCreateRoom}}
-				<div class="panel-footer clearfix">
-					<div class="pull-right">
-						<button type="button" class="btn btn-warning">Criar Sala</button>
-					</div>
-				</div>
-			{{/if}}
-		</div>
-	</div>
-</template>
-
-<template name="list_rooms">
-	<table class="table table-bordered table-hover table-condensed table-striped">
-		<thead>
-			<tr>
-				<td>Sala</td>
-				<td>Jogadres</td>
-				<td width="80" class="text-center">Ações</td>
-			</tr>
-		</thead>
-		<tbody>
-			{{#each rooms}}
-			<tr>
-				<td>{{ _id }}</td>
-				<td>{{ players.length }}</td>
-				<td class="text-center">
-					<button type="button" class="btn btn-xs btn-primary">Entrar na Sala</button>
-				</td>
-			</tr>
-			{{/each}}
-		</tbody>
-	</table>
+<template name="player">
+  <h1>{{name}}</h1>
+  <h3>Pedras</h3>
+  <ul>
+    {{#each pedras}}
+      <li>{{valor}}</li>
+    {{/each}}
+  </ul>
 </template>
