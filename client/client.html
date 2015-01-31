@@ -3,9 +3,13 @@
 </body>
 
 <template name="tabuleiro">
-  {{#each players}}
-    {{> player}}
-  {{/each}}
+  <div class="flex-container">
+    {{#each players}}
+      <div class="flex-item">
+        {{> player}}
+      </div>
+    {{/each}}
+  </div>
 </template>
 
 <template name="player">
