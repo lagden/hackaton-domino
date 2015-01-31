@@ -4,18 +4,28 @@
 			<div class="panel-body">
 				{{> list_rooms}}
 			</div>
+			<div class="panel-footer clearfix">
+				<div class="pull-right">
+					<button type="button" class="btn btn-warning">Criar Sala</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
 
 <template name="list_rooms">
 	<table class="table table-bordered table-hover table-condensed table-striped">
+		<thead>
+			<td>Sala</td>
+			<td>Jogadres</td>
+			<td width="80" class="text-center">Ações</td>
+		</thead>
 		<tbody>
 			{{#each rooms}}
 			<tr>
 				<td>{{ nome }}</td>
 				<td>{{ players.length }}</td>
-				<td>
+				<td class="text-center">
 					<button type="button" class="btn btn-xs btn-primary">Entrar na Sala</button>
 				</td>
 			</tr>
