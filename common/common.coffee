@@ -1,11 +1,5 @@
 @Rooms = new Mongo.Collection "rooms"
 
-Common = new WeakMap
-_p = (obj) ->
-  if Common.has(obj) is false
-    Common.set obj, {}
-  return Common.get obj
-
 buildPedras = ->
   pedras = []
   x = 0
@@ -29,7 +23,4 @@ shuffle = (array) ->
 
 class Domino
   constructor: ->
-    _p(@).pedras = shuffle(buildPedras())
-
-  getPedras: ->
-    _p(@).pedras
+    pedras = shuffle(buildPedras())
