@@ -3,13 +3,17 @@
 </body>
 
 <template name="tabuleiro">
-  <div class="flex-container">
-    {{#each players}}
-      <div class="flex-item">
-        {{> player}}
-      </div>
-    {{/each}}
-  </div>
+	<div class="flex-container">
+		{{#each players}}
+		<div class="flex-item">
+			{{> player}}
+		</div>
+		{{/each}}
+	</div>
+
+	<div class="container text-center">
+		<button type="button" class="btn btn-lg btn-primary">START PLAY</button>
+	</div>
 </template>
 
 <template name="player">
@@ -17,7 +21,7 @@
 	<h3>Pedras</h3>
 	<ul>
 		{{#each pedras}}
-			<li>{{valor}}</li>
+		<li>{{valor}}</li>
 		{{/each}}
 	</ul>
 </template>
