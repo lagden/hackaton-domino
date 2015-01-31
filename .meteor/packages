@@ -9,3 +9,6 @@ autopublish
 insecure
 coffeescript
 grokbot:bootstrap-flatly
+accounts-base
+accounts-ui
+accounts-password
