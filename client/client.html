@@ -1,3 +1,25 @@
 <body>
-
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-body">
+				{{> list_rooms}}
+			</div>
+		</div>
+	</div>
 </body>
+
+<template name="list_rooms">
+	<table class="table table-bordered table-hover table-condensed table-striped">
+		<tbody>
+			{{#each rooms}}
+			<tr>
+				<td>{{ nome }}</td>
+				<td>{{ players.length }}</td>
+				<td>
+					<button type="button" class="btn btn-xs btn-primary">Entrar na Sala</button>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>
